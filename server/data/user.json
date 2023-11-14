@@ -1,0 +1,14 @@
+[
+  {
+    "username": "john_doe",
+    "email": "john@example.com",
+    "password": "hashed_password",
+    "dateOfBirth": "1990-01-01"
+  },
+  {
+    "username": "jane_doe",
+    "email": "jane@example.com",
+    "password": "hashed_password1",
+    "dateOfBirth": "1995-05-15"
+  }
+]
