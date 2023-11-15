@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name":"Powerstay 24H Weightless Liquid Foundation",
+        "imgUrl": "https://image.made-in-china.com/43f34j00URTYprBnTcug/Best-Make-up-Base-Foundation-No-Brand-Liquid-Foundation-with-Private-Label.webp",
+        "stock": 123,
+        "price": 200000,
+        "description": "Its medium buildable coverage makes the formula suitable to be used multiple layered. SPF 30 PA+++. Non-Comedogenic. Non-Acnegenic. Dermatologically Tested.",
+        "CategoryId": 1
+    },
+    {
+        "id": 2,
+        "name":"Make Over Perfect Cover Two Way Cake 12g",
+        "imgUrl": "https://facescosmetiques.com/media/catalog/product/cache/17c5d32b33c884956bbe20b91bcf59d7/p/p/ppf655.jpg",
+        "stock": 77,
+        "price": 100000,
+        "description": " its water-insoluble formula helps maintain skin moistness and prevent skin dehydration.",
+        "CategoryId": 1
+    },
+    {
+        "id": 3,
+        "name":"Lash Impulse Waterproof Mascara",
+        "imgUrl": "https://images.squarespace-cdn.com/content/v1/5d5da0510df7c800018798fc/1574286995825-VJJFLKXMSCEF6MZ0NYNT/YN_LUX_WTRPRF_MASC_Black_WSWP_75191_V1_WEB_2500px.jpg",
+        "stock": 123,
+        "price": 80000,
+        "description": "a mascara with a waterproof formula that contains bamboo extract to lengthen and thicken eyelashes. Allergy & Ophthalmologist tested. Suitable for sensitive eyes and contact lens wearers",
+        "CategoryId": 2
+    },
+    {
+        "id": 4,
+        "name":"Hyperblack Superstay Liner",
+        "imgUrl": "https://www.beautetrade.com/uploads/images/products/1/6/organic-natural-pencil-private-label-new-product-2019-makeup-single-eyeliner1-0705139001554208957.jpg",
+        "stock": 123,
+        "price": 200000,
+        "description": "An intense color pen eye liner with a soft, thin, and flexible brush tip applicator for a precise application to create a longlasting bold and powerful look.",
+        "CategoryId": 2
+    },
+    {
+        "id": 5,
+        "name":"Hypnose Creamy Lipmatte",
+        "imgUrl": "https://image.made-in-china.com/202f0j00JUAGRIPqZhzd/Customize-Private-Label-12-Colors-Matte-Lip-Gloss-No-Name-Lipstick.jpg",
+        "stock": 78,
+        "price": 400000,
+        "description": "providing intense color that is able to cover the original color of the lips in one swipe, moist, but feels light without feeling sticky and oily.",
+        "CategoryId": 3
+    },
+    {
+        "id": 6,
+        "name":"SUPER STAY MATTE INK",
+        "imgUrl": "https://5.imimg.com/data5/SELLER/Default/2022/11/EN/HH/VY/65823115/private-label-matte-liquid-lipstick-500x500.jpg",
+        "stock": 450,
+        "price": 350000,
+        "description": "a lip cream with intense color and high pigmentation that is effective in covering dark lips, transferproof and long-lasting for up to 16 hours!",
+        "CategoryId": 3
+    },
+    {
+        "id": 7,
+        "name":"Blush On",
+        "imgUrl": "https://sc04.alicdn.com/kf/H51e009e69faf4c22a35827fa82b8b5aa2.jpg",
+        "stock": 600,
+        "price": 200000,
+        "description": "Blendable blush that feels light all day long. For long-lasting blush and ideal for light and dark skin",
+        "CategoryId": 4
+    },
+    {
+        "id": 8,
+        "name":"Bronzer",
+        "imgUrl": "https://vasanticosmetics.com/cdn/shop/files/EclipseContourPowder2P_551x.png?v=1690920374",
+        "stock": 54,
+        "price": 95000,
+        "description": "Our gorgeous bronzer are highly pigmented and buildable.",
+        "CategoryId": 4
+    }
+]
