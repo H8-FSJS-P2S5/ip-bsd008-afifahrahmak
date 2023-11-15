@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Oscar",
+    "about": "A tuxedo cat",
+    "breed": "Domestic",
+    "color": "Black and White",
+    "gender": "Male",
+    "age": "Adult",
+    "adoptionFee": 100000,
+    "imageUrl": "https://rawznaturalpetfood.com/wp-content/uploads/tuxedo-cats.jpg",
+    "SpeciesId": "1",
+    "UserId": "1"
+  },
+  {
+    "name": "Titan",
+    "about": "A good happy doggo",
+    "breed": " Affenpinscher ",
+    "color": "Reddish Brown",
+    "gender": "Male",
+    "age": "Young",
+    "adoptionFee": 200000,
+    "imageUrl": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/69371431/1/?bust=1699783892&width=720",
+    "SpeciesId": "2",
+    "UserId": "1"
+  },
+  {
+    "name": "Billy",
+    "about": "Pirate Parrot (Can Talk)",
+    "breed": "Parrot",
+    "color": "Green and Yellow",
+    "gender": "Male",
+    "age": "Adult",
+    "adoptionFee": 0,
+    "imageUrl": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/64839196/1/?bust=1685812905&width=720",
+    "SpeciesId": "3",
+    "UserId": "1"
+  },
+  {
+    "name": "Mabel ",
+    "about": "Playful bunny, always up for an adventure",
+    "breed": "Flemish Giant Mix",
+    "color": "Brown",
+    "gender": "Male",
+    "age": "Adult",
+    "adoptionFee": 100000,
+    "imageUrl": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/69312044/1/?bust=1699906788&width=720",
+    "SpeciesId": "4",
+    "UserId": "1"
+  },
+  {
+    "name": "Dallas",
+    "about": "Dallas is up to date on everything and ready for her new person",
+    "breed": "Quarterhorse & Thoroughbred Mix",
+    "color": "Chesnut",
+    "gender": "Female",
+    "age": "Senior",
+    "adoptionFee": 2500000,
+    "imageUrl": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59305832/3/?bust=1672449701&width=720",
+    "SpeciesId": "5",
+    "UserId": "1"
+  },
+  {
+    "name": "Aladdin",
+    "about": "He is curious, silly and super cute",
+    "breed": "Chinchilla",
+    "color": "Grey and Black",
+    "gender": "Male",
+    "age": "Adult",
+    "adoptionFee": 0,
+    "imageUrl": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/63852887/2/?bust=1693967921&width=720",
+    "SpeciesId": "6",
+    "UserId": "1"
+  },
+  {
+    "name": "Skye",
+    "about": "Healthy young beardie girl ",
+    "breed": "Reptile - Lizard",
+    "color": "Light Brown",
+    "gender": "Female",
+    "age": "Young",
+    "adoptionFee": 300000,
+    "imageUrl": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/69608147/3/?bust=1699474290&width=720",
+    "SpeciesId": "7",
+    "UserId": "1"
+  },
+  {
+    "name": "Eilene",
+    "about": "She doesn’t bite but may nibble on your shoe if you’re not paying attention to her",
+    "breed": "Pot Bellied",
+    "color": "Black",
+    "gender": "Female",
+    "age": "Adult",
+    "adoptionFee": 500000,
+    "imageUrl": "https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/53086821/2/?bust=1632582206&width=720",
+    "SpeciesId": "8",
+    "UserId": "1"
+  }
+]
