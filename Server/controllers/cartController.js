@@ -14,9 +14,9 @@ class CartController {
       const { pId } = req.params;
       const { userId } = req.loginInfo;
       const { productQuantity } = req.body;
-      console.log(req.params);
-      console.log(req.loginInfo);
-      console.log(req.body);
+      // console.log(req.params);
+      // console.log(req.loginInfo);
+      // console.log(req.body);
 
       //ga boleh masuk product yang sama dicart
       const checkIfItIsExistingInCart = await ProductCart.findOne({
@@ -28,6 +28,19 @@ class CartController {
 
       if (checkIfItIsExistingInCart) {
         throw new Error("The product is already existing in cart.");
+      }
+
+      //if product quantity inputted > stock, throw new error forbidden
+      const theStock = await Product.findOne({
+        where: {
+          id: pId,
+        },
+        attributes: ["stock"],
+      });
+      // console.log(theStock);
+
+      if (productQuantity > theStock.stock) {
+        throw new Error("Forbidden");
       }
 
       const newCart = {
@@ -112,6 +125,7 @@ class CartController {
     }
   }
 
+  //ini untuk when transaction status udah paid
   static async deleteCartByUserId(req, res, next) {
     try {
       const { userId } = req.loginInfo;
