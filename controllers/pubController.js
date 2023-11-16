@@ -6,10 +6,11 @@ class PubController {
   //PRODUCT
   static async readProductByCategoryId(req, res, next) {
     try {
+      const { cId } = req.params;
       const product = await Product.findAll({
         include: [{ model: Category }],
         where: {
-          CategoryId,
+          CategoryId: cId,
         },
       });
 
@@ -23,11 +24,11 @@ class PubController {
 
   static async readProductByProductId(req, res, next) {
     try {
-      const { id } = req.params;
+      const { pId } = req.params;
       const product = await Product.findOne({
         include: [{ model: Category }],
         where: {
-          id,
+          id: pId,
         },
       });
 

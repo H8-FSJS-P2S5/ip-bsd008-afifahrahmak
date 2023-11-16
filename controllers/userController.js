@@ -1,3 +1,4 @@
+const { Op } = require("sequelize");
 const { Product, Category, Cart, Transaction, User } = require("../models");
 
 class UserController {

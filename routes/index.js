@@ -20,22 +20,22 @@ router.post("/register", PubController.register);
 
 router.use(authentication);
 //Register, LogIn, Authentication (USER)
-router.get("/user/:id", UserController.readUserByUserId);
-router.put("/user/:id", UserController.editUserByUserId);
+router.get("/user", UserController.readUserByUserId);
+router.put("/user", UserController.editUserByUserId);
 
 //Register, LogIn, Authentication (CART)
-router.post("/cart", CartController.addCart);
-router.get("/cart/:id", CartController.readCartByUserId);
+router.post("/cart/:pId", CartController.addCart);
+router.get("/cart", CartController.readCartByUserId);
 
 router.delete(
   "/cart:pId",
   authorizationUser,
-  CartController.deleteCartByProductId
+  CartController.deleteProductInCartByProductId
 );
 
-router.delete("/cart/:id", CartController.deleteCartByUserId);
+router.delete("/cart", CartController.deleteCartByUserId);
 
 //Register, LogIn, Authentication (TRANSACTION)
-router.post("/transaction/:id", TransactionController.addTransactionByUserId);
+router.post("/transaction", TransactionController.addTransactionByUserId);
 
 module.exports = router;
