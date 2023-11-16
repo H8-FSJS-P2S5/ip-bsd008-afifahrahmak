@@ -25,7 +25,7 @@ class UserController {
 
   static async editUserByUserId(req, res, next) {
     try {
-      const { email, fullName, mobileNumber, password } = req.body;
+      const { email, fullName, mobileNumber, password, address } = req.body;
 
       const { userId } = req.loginInfo;
 
@@ -43,6 +43,7 @@ class UserController {
           fullName,
           mobileNumber,
           password,
+          address,
         },
         { where: { id: userId } }
       );

@@ -14,9 +14,9 @@ class CartController {
       const { pId } = req.params;
       const { userId } = req.loginInfo;
       const { productQuantity } = req.body;
+
       // console.log(req.params);
       // console.log(req.loginInfo);
-      // console.log(req.body);
 
       //ga boleh masuk product yang sama dicart
       const checkIfItIsExistingInCart = await ProductCart.findOne({
@@ -27,7 +27,10 @@ class CartController {
       });
 
       if (checkIfItIsExistingInCart) {
-        throw new Error("The product is already existing in cart.");
+        await ProductCart.update(
+          { productQuantity: productQuantity },
+          { where: { ProductId: pId, CartId: userId } }
+        );
       }
 
       //if product quantity inputted > stock, throw new error forbidden
@@ -58,10 +61,10 @@ class CartController {
         where: { UserId: userId },
       });
       //console.log(checkIfUserHasCartOrNot);
-      if (!checkIfUserHasCartOrNot) {
+      if (!checkIfUserHasCartOrNot && !checkIfItIsExistingInCart) {
         await Cart.create(newCart);
         await ProductCart.create(pnc);
-      } else {
+      } else if (!checkIfItIsExistingInCart && checkIfUserHasCartOrNot) {
         await ProductCart.create(pnc);
       }
 

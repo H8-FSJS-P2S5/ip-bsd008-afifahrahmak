@@ -1,6 +1,7 @@
 const { Product, Category, Cart, Transaction, User } = require("../models");
 const { comparePassword } = require("../helpers/bcrypt");
 const { signToken } = require("../helpers/jwt");
+const nodemailer = require("nodemailer");
 
 class PubController {
   //PRODUCT
@@ -118,7 +119,7 @@ class PubController {
         fullName,
         mobileNumber,
         password,
-        address: "Not Stated",
+        address,
       };
 
       //2.validasi dihandle di model dan constraint di migration
@@ -127,6 +128,29 @@ class PubController {
 
       //4.simpan ke database
       const response = await User.create(newUser);
+
+      let transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+          user: "gisellesamantha49@gmail.com",
+          pass: "g l f l j x j i t t o o i h w h",
+        },
+      });
+
+      let mailOptions = {
+        from: "gisellesamantha49@gmail.com",
+        to: email,
+        subject: "Welcome to Enhance!",
+        text: "Thank you for registering!",
+      };
+
+      transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+          console.log(error);
+        } else {
+          console.log("Email sent: " + info.response);
+        }
+      });
 
       //5.kirim response ke client
       res
