@@ -12,7 +12,6 @@ module.exports = (sequelize, DataTypes) => {
       this.belongsTo(models.Category);
       this.belongsToMany(models.Cart, {
         through: "ProductCart",
-        onDelete: "CASCADE",
       });
     }
   }

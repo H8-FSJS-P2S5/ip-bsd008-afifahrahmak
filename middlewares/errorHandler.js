@@ -1,4 +1,5 @@
 const errorHandler = (err, req, res, next) => {
+  console.log(err);
   let status = 500;
   let message = "Internal Server Error";
 
@@ -10,6 +11,11 @@ const errorHandler = (err, req, res, next) => {
   if (err.message === "Email/password tidak diberikan") {
     status = 401;
     message = "Email/Password tidak diberikan";
+  }
+
+  if (err.message === "The product is already existing in cart.") {
+    status = 403;
+    message = "The product is already existing in cart.";
   }
 
   if (err.message === "Password diberikan salah / tidak match") {

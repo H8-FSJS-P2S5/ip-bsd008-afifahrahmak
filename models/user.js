@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
         },
       },
       fullName: DataTypes.STRING,
-      mobileNumber: DataTypes.STRING,
+      mobileNumber: DataTypes.INTEGER,
       password: {
         type: DataTypes.STRING,
         allowNull: false,

@@ -18,9 +18,6 @@ module.exports = {
           key: "id",
         },
       },
-      productQuantity: {
-        type: Sequelize.INTEGER,
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

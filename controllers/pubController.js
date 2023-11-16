@@ -19,7 +19,9 @@ class PubController {
       }
 
       res.status(200).json(product);
-    } catch (error) {}
+    } catch (error) {
+      next(error);
+    }
   }
 
   static async readProductByProductId(req, res, next) {
@@ -95,7 +97,7 @@ class PubController {
 
       //5.generate token
       const payload = {
-        id: user.id,
+        userId: user.id,
       };
 
       const token = signToken(payload);
@@ -125,6 +127,7 @@ class PubController {
 
       //4.simpan ke database
       const response = await User.create(newUser);
+
       //5.kirim response ke client
       res
         .status(201)

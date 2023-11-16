@@ -5,10 +5,11 @@ const UserController = require("../controllers/userController");
 const CartController = require("../controllers/cartController");
 const TransactionController = require("../controllers/transactionController");
 const authentication = require("../middlewares/authentication");
+const authorizationProduct = require("../middlewares/authorizationProduct");
 
 //PUBLIC (PRODUCT)
-router.get("/product/:cId", PubController.readProductByCategoryId);
-router.get("/product/:pId", PubController.readProductByProductId);
+router.get("/productByCategoryId/:cId", PubController.readProductByCategoryId);
+router.get("/productByProductId/:pId", PubController.readProductByProductId);
 router.get("/product", PubController.readAllProduct);
 
 //PUBLIC (CATEGORY)
@@ -24,12 +25,12 @@ router.get("/user", UserController.readUserByUserId);
 router.put("/user", UserController.editUserByUserId);
 
 //Register, LogIn, Authentication (CART)
-router.post("/cart/:pId", CartController.addCart);
 router.get("/cart", CartController.readCartByUserId);
+router.post("/cart/:pId", CartController.addCart);
 
 router.delete(
-  "/cart:pId",
-  authorizationUser,
+  "/cart/:pId",
+  authorizationProduct,
   CartController.deleteProductInCartByProductId
 );
 

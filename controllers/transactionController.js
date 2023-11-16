@@ -19,6 +19,9 @@ class TransactionController {
       };
       await Transaction.create(putInTransaction);
       await User.update({ address: address }, { where: { id: userId } });
+      res.status(201).json({
+        msg: `Order for user with id ${userId} successfully placed!`,
+      });
     } catch (error) {
       next(error);
     }

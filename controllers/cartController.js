@@ -1,4 +1,4 @@
-const { Op } = require("sequelize");
+const { Op, Sequelize } = require("sequelize");
 const {
   Product,
   Category,
@@ -11,9 +11,24 @@ const {
 class CartController {
   static async addCart(req, res, next) {
     try {
-      const { id } = req.params;
+      const { pId } = req.params;
       const { userId } = req.loginInfo;
       const { productQuantity } = req.body;
+      console.log(req.params);
+      console.log(req.loginInfo);
+      console.log(req.body);
+
+      //ga boleh masuk product yang sama dicart
+      const checkIfItIsExistingInCart = await ProductCart.findOne({
+        where: {
+          ProductId: pId,
+          CartId: userId,
+        },
+      });
+
+      if (checkIfItIsExistingInCart) {
+        throw new Error("The product is already existing in cart.");
+      }
 
       const newCart = {
         UserId: userId,
@@ -21,15 +36,15 @@ class CartController {
       };
 
       const pnc = {
-        ProductId: id,
-        CartId: sequelize.literal(
-          `SELECT id FROM Carts WHERE userId = ${userId}`
-        ),
+        ProductId: pId,
+        CartId: userId,
         productQuantity: productQuantity,
       };
 
-      let cart;
-      let checkIfUserHasCartOrNot = Cart.findByPk(userId);
+      let checkIfUserHasCartOrNot = await Cart.findOne({
+        where: { UserId: userId },
+      });
+      //console.log(checkIfUserHasCartOrNot);
       if (!checkIfUserHasCartOrNot) {
         await Cart.create(newCart);
         await ProductCart.create(pnc);
@@ -39,7 +54,7 @@ class CartController {
 
       const product = await Product.findOne({
         where: {
-          id,
+          id: pId,
         },
       });
 
@@ -55,9 +70,9 @@ class CartController {
     try {
       const { userId } = req.loginInfo;
       const cart = await Cart.findOne({
-        include: { Product },
+        include: [{ model: Product }],
         where: {
-          userId,
+          UserId: userId,
         },
       });
 
@@ -79,21 +94,18 @@ class CartController {
       ProductCart.destroy({
         where: {
           ProductId: pId,
-          CartId: sequelize.literal(
-            `SELECT id FROM Carts WHERE userId = ${userId}`
-          ),
+          CartId: userId,
         },
       });
 
       const product = await Product.findOne({
         where: {
-          pId,
+          id: pId,
         },
       });
 
       res.status(200).json({
         message: `${product.name} success to delete from cart`,
-        product,
       });
     } catch (error) {
       next(error);
@@ -103,50 +115,51 @@ class CartController {
   static async deleteCartByUserId(req, res, next) {
     try {
       const { userId } = req.loginInfo;
-      const { pId } = req.params;
+      //const { pId } = req.params;
 
-      let allProductInCartToDecrement = Product.findAll({
+      let findCart = await ProductCart.findOne({
         where: {
-          id: {
-            [Op.in]: sequelize.literal(
-              `SELECT id FROM ProductCart WHERE CartId = ${userId}`
-            ),
-          },
+          CartId: userId,
         },
       });
 
-      ProductCart.destroy({
+      if (!findCart) {
+        throw new Error("Forbidden");
+      }
+
+      //DECREMENT THE STOCK OF THE PRODUCT THAT IS REMOVED FROM THE CART, AS IT IS PAID ALREADY
+      let allProductInCartToDecrement = await ProductCart.findAll({
         where: {
-          productId: pId,
-          cartId: sequelize.literal(
-            `SELECT id FROM Carts WHERE userId = ${userId}`
-          ),
+          CartId: userId,
         },
+        include: Product,
       });
 
-      allProductInCartToDecrement.forEach(async (decrementEachProduct) => {
-        if (!(decrementEachProduct.id <= 0)) {
-          await decrementEachProduct.decrement("id", {
-            by: 1,
-          });
-        }
+      let updatedProduct = allProductInCartToDecrement.map((eachProduct) => {
+        eachProduct.Product.stock = eachProduct.Product.stock - 1;
+        return eachProduct.Product;
+      });
+
+      //update into Product table
+      updatedProduct.forEach(async (eachProduct) => {
+        let { id, stock } = eachProduct;
+        await Product.update({ stock: stock }, { where: { id: id } });
+      });
+
+      await ProductCart.destroy({
+        where: {
+          CartId: userId,
+        },
       });
 
       await Cart.destroy({
         where: {
-          userId,
-        },
-      });
-
-      const product = await Product.findOne({
-        where: {
-          pId,
+          UserId: userId,
         },
       });
 
       res.status(200).json({
-        message: `${product.name} success to delete from cart`,
-        product,
+        message: `Cart for User with id ${userId} is deleted`,
       });
     } catch (error) {
       next(error);

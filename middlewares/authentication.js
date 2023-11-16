@@ -13,16 +13,16 @@ const authentication = async (req, res, next) => {
 
     const payload = decode(access_token);
 
-    const user = await User.findByPk(payload.id);
+    const user = await User.findByPk(payload.userId);
 
     if (!user) {
       throw new Error("NotFound");
     }
 
-    const { id } = payload;
+    const { userId } = payload;
 
     req.loginInfo = {
-      userId: id,
+      userId: userId,
     };
     next();
   } catch (error) {

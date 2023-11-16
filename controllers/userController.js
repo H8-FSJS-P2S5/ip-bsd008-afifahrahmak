@@ -5,9 +5,11 @@ class UserController {
   static async readUserByUserId(req, res, next) {
     try {
       const { userId } = req.loginInfo;
+      // console.log(userId);
+
       const user = await User.findOne({
         where: {
-          userId,
+          id: userId,
         },
       });
 
@@ -15,7 +17,7 @@ class UserController {
         throw new Error("NotFound");
       }
 
-      res.status(200).json(product);
+      res.status(200).json(user);
     } catch (error) {
       next(error);
     }
@@ -27,7 +29,9 @@ class UserController {
 
       const { userId } = req.loginInfo;
 
-      let readUser = await User.findByPk(userId);
+      let readUser = await User.findOne({
+        where: { id: userId },
+      });
 
       if (!readUser) {
         throw new Error("NotFound");
@@ -40,10 +44,12 @@ class UserController {
           mobileNumber,
           password,
         },
-        { where: { userId } }
+        { where: { id: userId } }
       );
 
-      let user = await User.findByPk(userId);
+      let user = await User.findOne({
+        where: { id: userId },
+      });
       res.status(200).json(user);
     } catch (error) {
       next(error);
