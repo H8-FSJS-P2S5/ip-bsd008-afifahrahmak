@@ -19,7 +19,6 @@ const Navbar = () => {
           <Link className="navbar-brand" to="/Home">
             Instagram
           </Link>
-          <Link className="navbar" to="/add" />
           <button
             className="navbar-toggler"
             type="button"
@@ -41,21 +40,6 @@ const Navbar = () => {
               <li className="nav-item active">
                 <Link className="nav-link" to="/Add-post">
                   <i className="fas fa-home"></i> Add Post
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="#">
-                  <i className="far fa-compass"></i> Explore
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="#">
-                  <i className="far fa-heart"></i> Notifications
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="#">
-                  <i className="far fa-user"></i> Profile
                 </Link>
               </li>
               <li className="nav-item">
