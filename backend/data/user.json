@@ -1,0 +1,27 @@
+[
+    {
+        "username": "dapid",
+        "email": "dapid@mail.com",
+        "password": "123456"
+    },
+    {
+        "username": "johndoe",
+        "email": "johndoe@mail.com",
+        "password": "password123"
+    },
+    {
+        "username": "alice smith",
+        "email": "alice.smith@mail.com",
+        "password": "securepass321"
+    },      
+    {
+        "username": "atang",
+        "email": "atang@mail.com",
+        "password": "123456"
+    },      
+    {
+        "username": "opet",
+        "email": "opet@mail.com",
+        "password": "123456"
+    }      
+]

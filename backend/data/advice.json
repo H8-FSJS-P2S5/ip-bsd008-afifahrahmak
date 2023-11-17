@@ -1,0 +1,122 @@
+[
+  {
+    "title": "Practice Mindfulness",
+    "advice": "Take a few minutes each day to practice mindfulness meditation. Focus on your breath and be present in the moment.",
+    "TypeId": 1,
+    "UserId": 1
+  },
+  {
+    "title": "Seek Professional Support",
+    "advice": "Consider reaching out to a mental health professional for guidance and support.",
+    "TypeId": 2,
+    "UserId": 2
+  },
+  {
+    "title": "Connect with Others",
+    "advice": "Social connections are crucial for mental well-being. Reach out to friends or family members for support.",
+    "TypeId": 1,
+    "UserId": 3
+  },
+  {
+    "title": "Set Realistic Goals",
+    "advice": "Break down your tasks into manageable goals. Celebrate small achievements to boost your confidence.",
+    "TypeId": 2,
+    "UserId": 4
+  },
+  {
+    "title": "Practice Gratitude",
+    "advice": "Keep a gratitude journal to focus on the positive aspects of your life. Write down things you're thankful for.",
+    "TypeId": 1,
+    "UserId": 5
+  },
+  {
+    "title": "Embrace Self-Care",
+    "advice": "Take time for yourself. Engage in activities that bring you joy and relaxation.",
+    "TypeId": 1,
+    "UserId": 1
+  },
+  {
+    "title": "Learn Stress Management Techniques",
+    "advice": "Explore stress-relief methods such as deep breathing, exercise, or meditation.",
+    "TypeId": 2,
+    "UserId": 2
+  },
+  {
+    "title": "Practice Positive Self-Talk",
+    "advice": "Challenge negative thoughts with positive affirmations. Be kind to yourself.",
+    "TypeId": 1,
+    "UserId": 3
+  },
+  {
+    "title": "Establish Healthy Boundaries",
+    "advice": "Set boundaries to protect your mental and emotional well-being. Learn to say no when necessary.",
+    "TypeId": 2,
+    "UserId": 4
+  },
+  {
+    "title": "Engage in Creative Outlets",
+    "advice": "Express yourself through art, music, or writing. Creative activities can be therapeutic.",
+    "TypeId": 1,
+    "UserId": 5
+  },
+  {
+    "title": "Practice Deep Breathing Exercises",
+    "advice": "Incorporate deep breathing exercises into your daily routine to reduce stress and promote relaxation.",
+    "TypeId": 1,
+    "UserId": 1
+  },
+  {
+    "title": "Educate Yourself on Mental Health",
+    "advice": "Read books or articles to better understand mental health conditions. Knowledge can empower you.",
+    "TypeId": 2,
+    "UserId": 2
+  },
+  {
+    "title": "Prioritize Sleep",
+    "advice": "Ensure you get enough quality sleep each night. Sleep is essential for mental well-being.",
+    "TypeId": 1,
+    "UserId": 3
+  },
+  {
+    "title": "Practice Time Management",
+    "advice": "Organize your tasks and prioritize them. Effective time management can reduce stress.",
+    "TypeId": 2,
+    "UserId": 4
+  },
+  {
+    "title": "Engage in Physical Exercise",
+    "advice": "Regular exercise can improve your mood and reduce symptoms of anxiety and depression.",
+    "TypeId": 1,
+    "UserId": 5
+  },
+  {
+    "title": "Try Relaxation Techniques",
+    "advice": "Explore relaxation techniques like progressive muscle relaxation or guided imagery.",
+    "TypeId": 1,
+    "UserId": 1
+  },
+  {
+    "title": "Cultivate a Supportive Network",
+    "advice": "Surround yourself with supportive and understanding individuals. Share your feelings with them.",
+    "TypeId": 2,
+    "UserId": 2
+  },
+  {
+    "title": "Eat a Balanced Diet",
+    "advice": "Nourish your body with a balanced diet rich in fruits, vegetables, and whole grains.",
+    "TypeId": 1,
+    "UserId": 3
+  },
+  {
+    "title": "Practice Relaxing Hobbies",
+    "advice": "Engage in hobbies that bring you joy and relaxation, such as gardening, painting, or cooking.",
+    "TypeId": 2,
+    "UserId": 4
+  },
+  {
+    "title": "Consider Therapy",
+    "advice": "Therapy can provide a safe space to explore your thoughts and emotions with a professional.",
+    "TypeId": 1,
+    "UserId": 5
+  }
+]
