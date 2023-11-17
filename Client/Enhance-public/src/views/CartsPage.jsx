@@ -1,13 +1,13 @@
 import axios from "axios";
 import { RouterProvider } from 'react-router-dom'; //in App.jsx
 import { useState, useEffect } from 'react';
-// import { useNavigate, Link, redirect, Outlet, useParams } from "react-router-dom";
+import { useNavigate, Link, redirect, Outlet, useParams } from "react-router-dom";
 
 
 
 const CartsPage = () => {
 
-    // let navigate = useNavigate()
+    let navigate = useNavigate()
     const [allProducts, setAllProducts] = useState([])
     const [address, setAddress] = useState("")
     const [loading, setLoading] = useState(false)
@@ -82,7 +82,7 @@ const CartsPage = () => {
   let realSubTotal = 0
   totalAllProduct.forEach((eachNumber)=>{
     realSubTotal = realSubTotal + eachNumber})
-
+  let realTotal = realSubTotal + 5000
 
 
 
@@ -115,7 +115,16 @@ const formSubmitHandler = async (e, productId) => {
         await axios.post(`http://localhost:3000/transaction`, data, {headers: {
             Authorization: `Bearer ${token}`,
           }})
-      
+
+        let response = await axios.post('http://localhost:3000/generate-midtrans-token', {realTotal: realTotal}, {headers: {
+          Authorization: `Bearer ${token}`,
+        }})
+        window.location.href =response.data.redirect_url
+
+        
+        await axios.delete(`http://localhost:3000/cart`, {headers: {
+          Authorization: `Bearer ${token}`,
+        }})
     
     } catch (error) {
         setError(error.message)
@@ -402,13 +411,13 @@ const formSubmitHandler = async (e, productId) => {
       {/* realtotal */}
       <div className="mt-6 flex items-center justify-between">
         <p className="text-sm font-medium text-gray-900">Total</p>
-        <p className="text-2xl font-semibold text-gray-900">{realSubTotal + 5000}</p>
+        <p className="text-2xl font-semibold text-gray-900">{realTotal}</p>
       </div>
       {/* realtotal */}
       {/* Total */}
     </div>
-    <button className="mt-4 mb-8 w-full rounded-md bg-gray-900 px-6 py-3 font-medium text-white">
-      Place Order
+    <button  className="mt-4 mb-8 w-full rounded-md bg-gray-900 px-6 py-3 font-medium text-white">
+     Place Order
     </button>
   </div>
   </form>

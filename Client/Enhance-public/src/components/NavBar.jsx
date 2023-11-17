@@ -24,7 +24,7 @@ const NavBar = () => {
 
       const cartButtonHandler = () => {
     
-    
+        
         navigate(`/cart`);
         
       };
