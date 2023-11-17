@@ -1,0 +1,26 @@
+npx sequelize-cli model:generate --name Category --attributes name:string
+npx sequelize-cli model:generate --name Product --attributes name:string,stock:integer,price:integer,description:string,CategoryId:integer
+npx sequelize-cli model:generate --name User --attributes email:string,fullName:string,mobileNumber:string,password:string,address:string
+npx sequelize-cli model:generate --name Cart --attributes UserId:integer,productQuantity:integer
+npx sequelize-cli model:generate --name ProductCart --attributes ProductId:integer,CartId:integer
+npx sequelize-cli model:generate --name Transaction --attributes isPaid:string,UserId:integer
+
+-------------------------
+
+
+npx sequelize-cli db:migrate --to 20231115073754-create-category.js
+npx sequelize-cli db:migrate --to 20231115073810-create-product.js
+npx sequelize-cli db:migrate --to 20231115073817-create-user.js
+npx sequelize-cli db:migrate --to 20231115073839-create-cart.js
+npx sequelize-cli db:migrate --to 20231115073857-create-product-cart.js
+npx sequelize-cli db:migrate --to 20231115073907-create-transaction.js
+npx sequelize migration:generate —name  add-column-imgUrl-on-Products
+
+--------------------------
+
+npx sequelize migration:generate --name  add-column-imgUrl-on-Products
+
+-------------------------
+
+npx sequelize-cli seed:generate --name seedCategories
+npx sequelize-cli seed:generate --name seedProducts
