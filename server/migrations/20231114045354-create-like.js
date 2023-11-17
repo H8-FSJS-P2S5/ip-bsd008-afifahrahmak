@@ -14,6 +14,8 @@ module.exports = {
         references: {
           model: "Posts",
           key: "id",
+          onDelete: "CASCADE", // Aturan ON DELETE CASCADE
+          onUpdate: "CASCADE",
         },
         allowNull: false,
       },
@@ -22,6 +24,8 @@ module.exports = {
         references: {
           model: "Users",
           key: "id",
+          onDelete: "CASCADE", // Aturan ON DELETE CASCADE
+          onUpdate: "CASCADE",
         },
         allowNull: false,
       },
@@ -36,6 +40,10 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("Likes");
+    await queryInterface.dropTable("Likes", null, {
+      truncate: true,
+      cascade: true,
+      restartIdentity: true,
+    });
   },
 };

@@ -22,7 +22,6 @@ const authentication = async (req, res, next) => {
       userId: id,
       email: email,
     };
-    // console.log(req.loginInfo);
     next();
   } catch (error) {
     next(error);

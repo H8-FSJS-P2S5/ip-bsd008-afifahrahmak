@@ -1,15 +1,24 @@
 const { hashPassword, compareHash } = require("../helper/bcrypt");
 const { User } = require("../models");
 const { signToken } = require("../helper/jwt");
+const nodemailer = require("nodemailer");
+const { imagekit } = require("../middleware/imageKit");
 class UserController {
   static async register(req, res, next) {
+    const { buffer } = req.file;
     const { username, email, password } = req.body;
+
     try {
+      const base64 = buffer.toString("base64");
+      let resp = await imagekit.upload({
+        file: base64,
+        fileName: req.file.originalname,
+      });
       const newUser = {
         username,
         email,
         password,
-        dateOfBirth: "1990-01-01",
+        imageProfile: resp.url,
       };
       // console.log(newUser);
       const response = await User.create(newUser);
@@ -19,7 +28,7 @@ class UserController {
       let data = {
         email: response.email,
       };
-      res.status(201).json(data);
+      res.status(201).json({ data });
     } catch (error) {
       next(error);
     }

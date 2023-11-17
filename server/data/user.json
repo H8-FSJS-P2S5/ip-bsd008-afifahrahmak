@@ -3,12 +3,12 @@
     "username": "john_doe",
     "email": "john@example.com",
     "password": "hashed_password",
-    "dateOfBirth": "1990-01-01"
+    "imageProfile": "https://img-static.readmore.id/wp-content/uploads/2023/08/Sketsa-Gambar-Kartun-Lucu.jpg.webp"
   },
   {
     "username": "jane_doe",
     "email": "jane@example.com",
     "password": "hashed_password1",
-    "dateOfBirth": "1995-05-15"
+    "imageProfile": "https://tse1.mm.bing.net/th?q=Sketsa%20Gambar%20Kartun%20Lucu"
   }
 ]

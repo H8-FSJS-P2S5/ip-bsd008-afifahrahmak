@@ -20,8 +20,8 @@ module.exports = {
       password: {
         type: Sequelize.STRING,
       },
-      dateOfBirth: {
-        type: Sequelize.DATE,
+      imageProfile: {
+        type: Sequelize.STRING,
       },
       createdAt: {
         allowNull: false,
@@ -34,6 +34,10 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("Users");
+    await queryInterface.dropTable("Users", null, {
+      truncate: true,
+      cascade: true,
+      restartIdentity: true,
+    });
   },
 };

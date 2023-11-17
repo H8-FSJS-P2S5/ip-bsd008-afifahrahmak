@@ -9,8 +9,9 @@ const errorHandler = (err, req, res, next) => {
   }
   if (err.name === "SequelizeUniqueConstraintError") {
     statusCode = 401;
-    message = "Email is already in use";
+    message = "Email/Username is already in use";
   }
+
   if (err.name === "Password wrong") {
     statusCode = 401;
     message =
@@ -20,11 +21,24 @@ const errorHandler = (err, req, res, next) => {
     statusCode = 401;
     message = "Please Login First";
   }
+  if (err.name === "JsonWebTokenError") {
+    statusCode = 401;
+    message = "invalid token beerer";
+  }
+  if (err.name === "SequelizeDatabaseError") {
+    statusCode = 401;
+    message = "Invalid input";
+  }
+  if (err.name === "Forbidden") {
+    statusCode = 403;
+    message = "you don't have access to do that";
+  }
   if (err.name === "Not Found") {
     statusCode = 404;
     message = "Not Found";
   }
   res.status(statusCode).json({ message });
+  console.log(err);
 };
 
 module.exports = {

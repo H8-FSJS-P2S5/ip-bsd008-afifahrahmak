@@ -10,9 +10,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      User.hasMany(models.Post);
-      User.hasMany(models.Comment);
-      User.hasMany(models.Like);
+      User.hasMany(models.Post, { foreignKey: "userId" });
+      User.hasMany(models.Comment, { foreignKey: "userId" });
+      User.hasMany(models.Like, { foreignKey: "userId" });
     }
   }
   User.init(
@@ -54,15 +54,15 @@ module.exports = (sequelize, DataTypes) => {
           },
         },
       },
-      dateOfBirth: {
-        type: DataTypes.DATE,
+      imageProfile: {
+        type: DataTypes.STRING,
         allowNull: false,
         validate: {
           notNull: {
-            msg: "DateOfBirth is required",
+            msg: "imageProfile is required",
           },
           notEmpty: {
-            msg: "DateOfBirth is required",
+            msg: "imageProfile is required",
           },
         },
       },

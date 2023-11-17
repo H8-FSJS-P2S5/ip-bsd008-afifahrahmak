@@ -10,16 +10,40 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Post.belongsTo(models.User, { foreignKey: "userId" });
-      Post.hasMany(models.Comment);
-      Post.hasMany(models.Like);
+      Post.hasMany(models.Comment, { foreignKey: "postId" });
+      Post.hasMany(models.Like, { foreignKey: "postId" });
     }
   }
   Post.init(
     {
-      title: DataTypes.STRING,
-      caption: DataTypes.STRING,
-      imageUrl: DataTypes.STRING,
-      userId: DataTypes.INTEGER,
+      title: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          notNull: true,
+          notEmpty: true,
+        },
+      },
+      caption: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          notNull: true,
+          notEmpty: true,
+        },
+      },
+      imageUrl: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+      userId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+          notNull: true,
+          notEmpty: true,
+        },
+      },
     },
     {
       sequelize,
