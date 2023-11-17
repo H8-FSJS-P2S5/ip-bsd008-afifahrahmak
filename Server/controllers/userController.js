@@ -5,7 +5,7 @@ class UserController {
   static async readUserByUserId(req, res, next) {
     try {
       const { userId } = req.loginInfo;
-      // console.log(userId);
+      console.log(userId, "<<<<<<8");
 
       const user = await User.findOne({
         where: {

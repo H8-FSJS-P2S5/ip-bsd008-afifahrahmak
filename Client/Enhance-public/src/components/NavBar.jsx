@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
+import {googleLogout} from '@react-oauth/google'
 
 
 
@@ -39,7 +40,8 @@ const NavBar = () => {
 
       const logOutHandler = () => {
     
-        localStorage.removeItem('access_token');
+        localStorage.clear();
+        googleLogout()
         navigate(`/login`);
         
       };

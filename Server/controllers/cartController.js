@@ -142,10 +142,17 @@ class CartController {
       const { pId } = req.params;
       const { userId } = req.loginInfo;
 
+      const checkCartId = await Cart.findOne({
+        where: {
+          UserId: userId,
+        },
+        attributes: ["id"],
+      });
+
       ProductCart.destroy({
         where: {
           ProductId: pId,
-          CartId: userId,
+          CartId: checkCartId.id,
         },
       });
 
@@ -180,7 +187,7 @@ class CartController {
 
       let findCart = await ProductCart.findOne({
         where: {
-          CartId: userId,
+          CartId: checkCartId.id,
         },
       });
 

@@ -2,14 +2,28 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ButtonLR from "../components/ButtonLR"
+import { GoogleLogin} from '@react-oauth/google'
 
 
-const LogInPage = () => {
+const LogInPage = ({url}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   let navigate = useNavigate()
 
+  async function googleLogin(codeResponse){
+    try{
+      console.log(codeResponse);
+      const {data} = await axios.post(
+        `http://localhost:3000/google-login`, null, {headers: {token: codeResponse.credential}}
+      )
+      console.log(data);
+      localStorage.setItem("access_token", data)
+      navigate('/home')
+    } catch(error){
+      console.log(error)
+    }
+  }
 
   const inputEmailOnChangeHandler = (evt) => {
     setEmail(evt.target.value);
@@ -53,6 +67,17 @@ const LogInPage = () => {
           <div className="rounded-xl bg-gray-800 bg-opacity-50 px-16 py-10 shadow-lg backdrop-blur-md max-sm:px-8">
             <div className="text-white">
 
+
+
+            <div>
+                <GoogleLogin onSuccess={googleLogin}/>
+              </div>
+
+              <hr />
+              <hr />
+              <br />
+        
+
               {/* Judul & SubJudul dari Halaman Login */}
               <div className="mb-8 flex flex-col items-center">
                 <a href="#"
@@ -60,6 +85,9 @@ const LogInPage = () => {
                 <span className="text-gray-300">Enter Login Details</span>
               </div>
               {/* end of Judul & SubJudul dari Halaman Login */}
+              
+            
+
 
 
               <form onSubmit={loginButtonHandler}>
