@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Beautiful Sunset",
+    "caption": "Enjoying the view",
+    "imageUrl": "https://example.com/sunset.jpg",
+    "userId": 1
+  },
+  {
+    "title": "Coffee Time",
+    "caption": "Starting the day with coffee",
+    "imageUrl": "https://example.com/coffee.jpg",
+    "userId": 2
+  }
+]
