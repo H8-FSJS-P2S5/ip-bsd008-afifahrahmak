@@ -18,19 +18,22 @@ class CartController {
       // console.log(req.params);
       // console.log(req.loginInfo);
 
-      //ga boleh masuk product yang sama dicart
-      const checkIfItIsExistingInCart = await ProductCart.findOne({
+      const checkCartId = await Cart.findOne({
         where: {
-          ProductId: pId,
-          CartId: userId,
+          UserId: userId,
         },
+        attributes: ["id"],
       });
 
-      if (checkIfItIsExistingInCart) {
-        await ProductCart.update(
-          { productQuantity: productQuantity },
-          { where: { ProductId: pId, CartId: userId } }
-        );
+      let checkIfItIsExistingInCart;
+      if (checkCartId) {
+        //ga boleh masuk product yang sama dicart
+        checkIfItIsExistingInCart = await ProductCart.findOne({
+          where: {
+            ProductId: pId,
+            CartId: checkCartId.id,
+          },
+        });
       }
 
       //if product quantity inputted > stock, throw new error forbidden
@@ -42,19 +45,17 @@ class CartController {
       });
       // console.log(theStock);
 
-      if (productQuantity > theStock.stock) {
+      let pQ = productQuantity;
+      if (pQ > theStock.stock) {
         throw new Error("Forbidden");
       }
 
+      if (!pQ) {
+        pQ = 1;
+      }
       const newCart = {
         UserId: userId,
         //productQuantity: productQuantity,
-      };
-
-      const pnc = {
-        ProductId: pId,
-        CartId: userId,
-        productQuantity: productQuantity,
       };
 
       let checkIfUserHasCartOrNot = await Cart.findOne({
@@ -63,9 +64,43 @@ class CartController {
       //console.log(checkIfUserHasCartOrNot);
       if (!checkIfUserHasCartOrNot && !checkIfItIsExistingInCart) {
         await Cart.create(newCart);
+
+        let theid = await Cart.findOne({
+          where: {
+            UserId: userId,
+          },
+          attributes: ["id"],
+        });
+
+        const pnc = {
+          ProductId: pId,
+          CartId: theid.id,
+          productQuantity: pQ,
+        };
+
         await ProductCart.create(pnc);
       } else if (!checkIfItIsExistingInCart && checkIfUserHasCartOrNot) {
+        let theid = await Cart.findOne({
+          where: {
+            UserId: userId,
+          },
+          attributes: ["id"],
+        });
+
+        const pnc = {
+          ProductId: pId,
+          CartId: theid.id,
+          productQuantity: pQ,
+        };
+
         await ProductCart.create(pnc);
+      }
+
+      if (checkIfItIsExistingInCart) {
+        await ProductCart.update(
+          { productQuantity: pQ },
+          { where: { ProductId: pId, CartId: checkCartId.id } }
+        );
       }
 
       const product = await Product.findOne({
@@ -134,6 +169,15 @@ class CartController {
       const { userId } = req.loginInfo;
       //const { pId } = req.params;
 
+      await Transaction.update({ isPaid: true }, { where: { UserId: userId } });
+
+      const checkCartId = await Cart.findOne({
+        where: {
+          UserId: userId,
+        },
+        attributes: ["id"],
+      });
+
       let findCart = await ProductCart.findOne({
         where: {
           CartId: userId,
@@ -147,7 +191,7 @@ class CartController {
       //DECREMENT THE STOCK OF THE PRODUCT THAT IS REMOVED FROM THE CART, AS IT IS PAID ALREADY
       let allProductInCartToDecrement = await ProductCart.findAll({
         where: {
-          CartId: userId,
+          CartId: checkCartId.id,
         },
         include: Product,
       });
@@ -165,7 +209,7 @@ class CartController {
 
       await ProductCart.destroy({
         where: {
-          CartId: userId,
+          CartId: checkCartId.id,
         },
       });
 

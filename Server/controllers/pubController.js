@@ -119,7 +119,7 @@ class PubController {
         fullName,
         mobileNumber,
         password,
-        address,
+        address: "",
       };
 
       //2.validasi dihandle di model dan constraint di migration

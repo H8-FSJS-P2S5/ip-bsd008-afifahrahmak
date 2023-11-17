@@ -18,6 +18,11 @@ const errorHandler = (err, req, res, next) => {
     message = "The product is already existing in cart.";
   }
 
+  if (err.name === "already_paid") {
+    status = 400;
+    message = "You have already paid";
+  }
+
   if (err.message === "Password diberikan salah / tidak match") {
     status = 401;
     message = "Password diberikan salah / tidak match";

@@ -39,4 +39,9 @@ router.delete("/cart", CartController.deleteCartByUserId);
 //Register, LogIn, Authentication (TRANSACTION)
 router.post("/transaction", TransactionController.addTransactionByUserId);
 
+router.post(
+  "/generate-midtrans-token",
+  TransactionController.generateMidtransToken
+);
+
 module.exports = router;
