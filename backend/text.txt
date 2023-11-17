@@ -1,0 +1,66 @@
+npx sequelize model:generate --name User --attributes email:string,username:string,password:string
+
+npx sequelize model:generate --name Type --attributes type:string
+
+npx sequelize model:generate --name Quote --attributes q:string,a:string,c:string,h:string
+
+npx sequelize model:generate --name Advice --attributes title:string,advice:string,TypeId:integer,UserId:integer
+
+title: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          notEmpty: {
+            msg: "title is required",
+          },
+          notNull: {
+            msg: "title is required",
+          },
+        },
+      },
+      advice: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          notEmpty: {
+            msg: "advice is required",
+          },
+          notNull: {
+            msg: "advice is required",
+          },
+        },
+      },
+      type: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          notEmpty: {
+            msg: "type is required",
+          },
+          notNull: {
+            msg: "type is required",
+          },
+        },
+      },
+      UserId: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+          notEmpty: {
+            msg: "UserId is required",
+          },
+          notNull: {
+            msg: "UserId is required",
+          },
+        },
+      },
+    },
+
+
+    {
+        type: Sequelize.INTEGER,
+        references: {
+          model: "Users",
+          key: "id",
+        },
+      },
