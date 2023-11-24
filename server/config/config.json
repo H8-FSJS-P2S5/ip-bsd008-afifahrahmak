@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "270900",
+    "database": "IP_Rafi",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "270900",
+    "database": "IP_Rafi_Test",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "270900",
+    "database": "IP_Rafi_Prod",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}

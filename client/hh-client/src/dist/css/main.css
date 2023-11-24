@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    font-family: "Rubik", sans-serif;
+}
+
+:root {
+    --primary-color: #f6f8fd;
+    --secondary-color: #02bbdd;
+    --color-text: #ff8000;
+    --navbar-color: #ffffff;
+    --navbar-color-text: #2e4a70;
+  }
+/* Navbar */
+  .navbar {
+    position: fixed;
+    background-color: #f6f8fd;
+    padding: 15px 0 15px 0;
+    width: 100%;
+    transition: all 0.2s ease;
+    z-index: 9999;
+    animation-name: fadeInDown;
+    animation-duration: 1s;
+  }
+
+  .navbar.color-active{
+    background-color: var(--navbar-color);
+    padding: 20px 0 20px 0;
+    border-bottom: 2px solid var(--secondary-color);
+  }
+  
+  .navbar .nav-link a{
+    /* padding: 5px 10px 5px 10px; */
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    color: orange;
+  }
+
+  .navbar .nav-link a:hover{
+    color: var(--navbar-color);
+  }
+
+  .navbar .nav-link .active{
+    color: var(--color-text);
+    border-radius: 5px;
+    text-underline-offset: var(--navbar-color-text);
+  }
+
+  .navbar .nav-link .active:hover{
+    color: white;
+  }
+
+  .navbar-brand{
+    color: var(--navbar-color-text);
+  }
+
+/* Homepage Header */
+
+  header {
+    background: #f6f8fd; /* Fallback jika gradien tidak didukung */
+  }
+
+  .homepage .header-box {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .homepage .header-box h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: orange;
+    --animate-delay: 0.6s ;
+  }
+
+  .homepage .header-box h1 span{
+    font-weight: 900;
+    color: #02bbdd;
+  }
+
+  .homepage .header-box p{
+    line-height: 2;
+    color: #2e4a70;
+    font-weight: 500;
+    --animate-delay: 1s ;
+  }
+
+  .homepage .header-box button{
+    --animate-delay: 1.4s 
+  }
+
+  .homepage .header-box img{
+    width: 110%;
+  }
+
+  @media screen and (max-width: 1200px) { 
+    .homepage .header-box {
+      padding-top: 8rem;
+    }
+    .homepage .header-box img{
+      width: 400px;
+      display: block;
+      margin-inline: auto;
+    }
+  }
+
+  @media screen and (max-width: 575) { 
+    .homepage .header-box h1 {
+      font-size: 2.4rem;
+    } 
+  }
+
+  @media screen and (max-width: 475) { 
+    .homepage .header-box h1 {
+      font-size: 3rem;
+    } 
+    .homepage .header-box p {
+      font-size: 14px;
+    } 
+    .homepage .header-box img {
+      width: 300px;
+    } 
+  }
+
+  @media screen and (max-width: 375) { 
+    .homepage .header-box h1 {
+      font-size: 2rem;
+    } 
+    .homepage .header-box p {
+      font-size: 12px;
+    } 
+    .homepage .header-box img {
+      width: 300px;
+    } 
+  }
+
+  /* Login Page */
+
+  @media screen and (max-width: 1200) { 
+    .signin-image {
+      display: none;
+    }
+  }  
+
+   /* Footer */
+
+   .footer {
+    background-color: orange;
+  }
+  

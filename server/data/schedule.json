@@ -1,0 +1,398 @@
+[
+  {
+    "psychologistId": 1,
+    "date": "2023-11-20",
+    "time": "10:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 2,
+    "date": "2023-11-20",
+    "time": "13:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 3,
+    "date": "2023-11-20",
+    "time": "17:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 4,
+    "date": "2023-11-21",
+    "time": "10:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 5,
+    "date": "2023-11-21",
+    "time": "13:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 1,
+    "date": "2023-11-21",
+    "time": "17:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 2,
+    "date": "2023-11-22",
+    "time": "10:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 3,
+    "date": "2023-11-22",
+    "time": "13:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 4,
+    "date": "2023-11-22",
+    "time": "17:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 5,
+    "date": "2023-11-23",
+    "time": "10:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 1,
+    "date": "2023-11-23",
+    "time": "13:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 2,
+    "date": "2023-11-23",
+    "time": "17:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 3,
+    "date": "2023-11-24",
+    "time": "10:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 4,
+    "date": "2023-11-24",
+    "time": "13:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 5,
+    "date": "2023-11-24",
+    "time": "17:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 1,
+    "date": "2023-11-25",
+    "time": "10:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 2,
+    "date": "2023-11-25",
+    "time": "13:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 3,
+    "date": "2023-11-25",
+    "time": "17:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 4,
+    "date": "2023-11-26",
+    "time": "10:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 5,
+    "date": "2023-11-26",
+    "time": "13:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 1,
+    "date": "2023-11-26",
+    "time": "17:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 2,
+    "date": "2023-11-27",
+    "time": "10:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 3,
+    "date": "2023-11-27",
+    "time": "13:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 4,
+    "date": "2023-11-27",
+    "time": "17:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 5,
+    "date": "2023-11-28",
+    "time": "10:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 1,
+    "date": "2023-11-28",
+    "time": "13:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 2,
+    "date": "2023-11-28",
+    "time": "17:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 3,
+    "date": "2023-11-29",
+    "time": "10:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 4,
+    "date": "2023-11-29",
+    "time": "13:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 5,
+    "date": "2023-11-29",
+    "time": "17:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 1,
+    "date": "2023-11-30",
+    "time": "10:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 2,
+    "date": "2023-11-30",
+    "time": "13:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 3,
+    "date": "2023-11-30",
+    "time": "17:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 2,
+    "date": "2023-11-20",
+    "time": "10:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 3,
+    "date": "2023-11-20",
+    "time": "13:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 4,
+    "date": "2023-11-20",
+    "time": "17:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 5,
+    "date": "2023-11-21",
+    "time": "10:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 1,
+    "date": "2023-11-21",
+    "time": "13:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 2,
+    "date": "2023-11-21",
+    "time": "17:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 3,
+    "date": "2023-11-22",
+    "time": "10:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 4,
+    "date": "2023-11-22",
+    "time": "13:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 5,
+    "date": "2023-11-22",
+    "time": "17:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 1,
+    "date": "2023-11-23",
+    "time": "10:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 2,
+    "date": "2023-11-23",
+    "time": "13:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 3,
+    "date": "2023-11-23",
+    "time": "17:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 4,
+    "date": "2023-11-24",
+    "time": "10:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 5,
+    "date": "2023-11-24",
+    "time": "13:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 1,
+    "date": "2023-11-24",
+    "time": "17:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 2,
+    "date": "2023-11-25",
+    "time": "10:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 3,
+    "date": "2023-11-25",
+    "time": "13:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 4,
+    "date": "2023-11-25",
+    "time": "17:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 5,
+    "date": "2023-11-26",
+    "time": "10:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 1,
+    "date": "2023-11-26",
+    "time": "13:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 2,
+    "date": "2023-11-26",
+    "time": "17:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 3,
+    "date": "2023-11-27",
+    "time": "10:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 4,
+    "date": "2023-11-27",
+    "time": "13:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 5,
+    "date": "2023-11-27",
+    "time": "17:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 1,
+    "date": "2023-11-28",
+    "time": "10:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 2,
+    "date": "2023-11-28",
+    "time": "13:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 3,
+    "date": "2023-11-28",
+    "time": "17:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 4,
+    "date": "2023-11-29",
+    "time": "10:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 5,
+    "date": "2023-11-29",
+    "time": "13:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 1,
+    "date": "2023-11-29",
+    "time": "17:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 2,
+    "date": "2023-11-30",
+    "time": "10:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 3,
+    "date": "2023-11-30",
+    "time": "13:00:00",
+    "status": "Tersedia"
+  },
+  {
+    "psychologistId": 4,
+    "date": "2023-11-30",
+    "time": "17:00:00",
+    "status": "Tersedia"
+  }
+]

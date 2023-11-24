@@ -1,0 +1,43 @@
+[
+    {
+      "name": "Dr. Saras",
+      "specialization": "Counseling Psychology",
+      "hourly_rate": 15000,
+      "availability": "Tersedia",
+      "email": "asaraswati@hacktiv8.com",
+      "photoImage": "https://i.pinimg.com/564x/1b/52/fd/1b52fd81c2282b432b85dc6a8a01f13d.jpg"
+    },
+    {
+      "name": "Dr. Niken",
+      "specialization": "Relationship Psychology",
+      "hourly_rate": 10000,
+      "availability": "Tersedia",
+      "email": "drniken@gmail.com",
+      "photoImage": "https://i.pinimg.com/564x/16/96/71/169671343ef815d20808e6c9e43c5c19.jpg"
+    },
+    {
+      "name": "Dr. Taufik",
+      "specialization": "Educational Psychology",
+      "hourly_rate": 10000,
+      "availability": "Tersedia",
+      "email": "drtaufik@gmail.com",
+      "photoImage": "https://i.pinimg.com/564x/ce/63/47/ce63475562f960ede351c2533415adc5.jpg"
+    },
+    {
+      "name": "Dr. Dzul",
+      "specialization": "Social Psychology",
+      "hourly_rate": 10000,
+      "availability": "Tersedia",
+      "email": "drdzul@gmail.com",
+      "photoImage": "https://i.pinimg.com/564x/eb/e6/f4/ebe6f490ccff1daa0a3dc7d9dbbb92d3.jpg"
+    },
+    {
+      "name": "Test",
+      "specialization": "Social Psychology",
+      "hourly_rate": 10000,
+      "availability": "Tersedia",
+      "email": "naufalrafi27@gmail.com",
+      "photoImage": "https://i.pinimg.com/564x/1b/0a/41/1b0a41cf2132a34bf05a9b4dee30c1a6.jpg"
+    }
+  ]
+  
