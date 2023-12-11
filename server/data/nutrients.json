@@ -1,0 +1,35 @@
+[
+  {
+    "calories": 543.36,
+    "fat": 16.2,
+    "carbs": 83.7,
+    "sugar": 5.32,
+    "cholesterol": 20.47,
+    "sodium": 413.23,
+    "protein": 16.84,
+    "fiber": 6.73,
+    "recipeId": 1
+  },
+  {
+    "calories": 591.44,
+    "fat": 13.42,
+    "carbs": 69.02,
+    "sugar": 2.54,
+    "cholesterol": 97.97,
+    "sodium": 231.04,
+    "protein": 44.9,
+    "fiber": 2.94,
+    "recipeId": 2
+  },
+  {
+    "calories": 190.68,
+    "fat": 5.25,
+    "carbs": 16.89,
+    "sugar": 3.01,
+    "cholesterol": 31.18,
+    "sodium": 477.75,
+    "protein": 18.46,
+    "fiber": 5.85,
+    "recipeId": 3
+  }
+]
